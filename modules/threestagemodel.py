@@ -186,6 +186,14 @@ class ThreeStageModel(object):
         return c5_list, c10_list, growth
 
     def enterprise_value(self, period_for_gordons_formula):
+        """
+        Enterprise value
+
+        Parameters
+        =========
+        period_for_gordons_formula (int) : The period at which gordons formula will be applied
+
+        """
 
         gFCF = self.FCF_growth()
         df = self.three_stage_model_df
@@ -201,6 +209,7 @@ class ThreeStageModel(object):
 
         print('the price is (gordons formula):', price)
         print('the cumulative value of firm is:', cum_ev)
+        print('the sum of these components is:')
 
         return price + cum_ev
 
